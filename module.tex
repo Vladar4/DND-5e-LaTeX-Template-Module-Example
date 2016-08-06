@@ -1,0 +1,81 @@
+\documentclass[10pt,twoside]{book}
+\usepackage[bg-print]{dnd} % Options: bg-a4, bg-letter, bg-full, bg-print.
+\usepackage[pdfusetitle]{hyperref}
+\usepackage{multicol}
+\usepackage[toc]{multitoc}
+\usepackage{subfiles}
+\usepackage{tocloft}
+\usepackage[utf8]{inputenc}
+
+\author{AUTHOR}
+\title{TITLE}
+
+\fancyfoot[LO]{\vspace{-0.1cm}
+\footnotesize{Not for resale. Permission granted to print or photocopy this document for personal use only. TITLE}}
+
+\fancyfoot[RE]{
+\footnotesize{\vspace{-0.15cm}Not for resale. Permission granted to print or photocopy this document for personal use only. TITLE}}
+
+% Start document
+\begin{document}
+\fontfamily{ppl}\selectfont % Set text font
+
+% Your content goes here
+
+% Title page
+
+\begin{titlepage} \backgroundsetup{contents={}} \begin{onecolumn}
+\begin{center}
+	%\vspace{0.5cm}
+	{\Huge \textbf TITLE}
+	
+	\vspace{0.5cm}
+	\includegraphics[width=\textwidth]{img/hr.pdf}
+	
+	\vspace{0.5cm}
+	{\huge \textbf Subtitle}
+	
+	\vspace{0.5cm}
+	% Replace this picture with cover art
+	\begin{picture}(500,200)
+		\put(0,0){\framebox(500,200)}
+	\end{picture}
+	%\includegraphics[width=\textwidth]{img/cover.png}
+	
+	\vspace{0.5cm}
+	\lipsum[1]
+
+	\vspace{0.5cm}
+	{\Large A xxxx-hour adventure for two xxth--xxth level characters}
+
+	\vfill
+	
+	{\Large by AUTHOR}
+	
+	\vspace{0.35cm}
+	% DMSGUILD LOGO
+	%\includegraphics[width=0.25\textwidth]{img/dmsguild.jpg}
+\end{center}
+
+\begin{minipage}{0.94\textwidth}
+{\footnotesize
+	DUNGEONS \& DRAGONS, D\&D, Wizards of the Coast, Forgotten Realms, Ravenloft, the dragon ampersand, and all other Wizards of the Coast product names, and their respective logos are trademarks of Wizards of the Coast in the USA and other countries.\\
+	This work contains material that is copyright Wizards of the Coast and/or other authors. Such material is used with permission under the Community Content Agreement for Dungeon Masters Guild.\\
+	All other original material in this work is copyright 2016 by AUTHOR and published under the Community Content Agreement for Dungeon Masters Guild.}
+\end{minipage}
+\end{onecolumn} \end{titlepage}
+\clearpage
+
+\renewcommand{\cfttoctitlefont}{\color{titlered}\normalfont\scshape\Huge}
+\fancypagestyle{plain}{}\setcounter{tocdepth}{2}\tableofcontents
+
+% MAIN CONTENT
+
+\subfile{part_1}
+\subfile{part_2}
+\subfile{part_a}
+\subfile{part_b}
+\subfile{part_c}
+
+% End document
+\end{document}

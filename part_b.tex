@@ -1,0 +1,99 @@
+\documentclass[example]{subfiles}
+
+\newcommand{\inittracker}{
+	\begin{dndtable}[lXlX]\multicolumn{4}{c}{\textbf{Initiative Tracker}}\\
+		30 & & 15 &\\ 29 & & 14 &\\ 28 & & 13 &\\ 27 & & 12 &\\ 26 & & 11 &\\
+		25 & & 10 &\\ 24 & & 9 &\\ 23 & & 8 &\\ 22 & & 7 &\\ 21 & & 6 &\\
+		20 & & 5 &\\ 19 & & 4 &\\ 18 & & 3 &\\ 17 & & 2 &\\ 16 & & 1 &\\
+	\end{dndtable}}
+
+\begin{document}
+\fontfamily{ppl}\selectfont
+\clearpage
+
+\section{Appendix B: Encounters}
+\begin{multicols}{2}
+
+% Encounter Template
+\begin{comment}
+
+\subsection{Encounter }
+\begin{monsterbox}{}
+	\textit{}\\
+	\hline
+	\basics[
+		armorclass = ,
+		hitpoints = ,
+		speed = {30 ft.}]
+	\hline
+	\stats[
+		STR = \stat{},
+		DEX = \stat{},
+		CON = \stat{},
+		INT = \stat{},
+		WIS = \stat{},
+		CHA = \stat{}]
+	\hline
+	\details[
+		languages = {},
+		challenge = { ( XP)}]
+	\hline
+	\begin{monsteraction}[]
+	
+	\end{monsteraction}
+	
+	\monstersection{Actions}
+	\begin{monsteraction}[]
+		\textit{Melee Weapon Attack:}
+	\end{monsteraction}
+\end{monsterbox}
+\\\\
+Monster 1 ( HP):\\\\
+\vfill\inittracker
+
+\end{comment}
+
+\subsection{Encounter 1}
+\begin{monsterbox}{Bat}
+	\textit{Tiny beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass = 12,
+		hitpoints = 1 (1d4 -- 1),
+		speed = {5 ft., fly 30 ft.}]
+	\hline
+	\stats[
+		STR = \stat{2},
+		DEX = \stat{15},
+		CON = \stat{8},
+		INT = \stat{2},
+		WIS = \stat{12},
+		CHA = \stat{4}]
+	\hline
+	\details[
+		senses = {blindsight 60 ft., passive Perception 11},
+		languages = {---},
+		challenge = {0 (10 XP)}]
+	\hline
+	\begin{monsteraction}[Echolocation]
+		While it can't hear, the bat has on blindsight.
+	\end{monsteraction}
+	
+	\begin{monsteraction}[Keen Hearing]
+		The bat has advantage on Wisdom (Perception) checks that rely on hearing.
+	\end{monsteraction}
+	
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +0 to hit, reach 5 ft., one creature. Hit 1 piercing damage.
+	\end{monsteraction}
+\end{monsterbox}
+\\\\
+Bat 1 (1 HP):\\\\
+Bat 2 (1 HP):\\\\
+Bat 3 (1 HP):\\\\
+Bat 4 (1 HP):\\\\
+\vfill\inittracker
+
+\end{multicols}
+\end{document}
