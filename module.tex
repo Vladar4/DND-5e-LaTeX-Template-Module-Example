@@ -17,6 +17,10 @@
 \fancyfoot[RE]{
 \footnotesize{\vspace{-0.15cm}Not for resale. Permission granted to print or photocopy this document for personal use only. TITLE}}
 
+% Reset footnote counter for each new page
+\usepackage{perpage} %the perpage package
+\MakePerPage{footnote} %the perpage package command
+
 % Start document
 \begin{document}
 \fontfamily{ppl}\selectfont % Set text font
