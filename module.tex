@@ -1,7 +1,9 @@
 \documentclass[10pt,twoside,twocolumn,openany]{book}
-\usepackage[bg-print]{dnd} % Options: bg-a4, bg-letter, bg-full, bg-print.
+\usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage[bg-print]{dnd} % Options: bg-a4, bg-letter, bg-full, bg-print, justified
 \usepackage{subfiles}
+\usepackage{lipsum}
 
 \pdfinfo{
 	/Author (AUTHOR)
@@ -9,11 +11,8 @@
 	/Keywords (D&D;Adventure)
 }
 
-\fancyfoot[LO]{\vspace{-0.1cm}
+\fancyfoot[LO,RE]{\vspace{-0.1cm}
 \footnotesize{Not for resale. Permission granted to print or photocopy this document for personal use only. TITLE}}
-
-\fancyfoot[RE]{
-\footnotesize{\vspace{-0.15cm}Not for resale. Permission granted to print or photocopy this document for personal use only. TITLE}}
 
 % Reset footnote counter for each new page
 \usepackage{perpage} %the perpage package
@@ -27,7 +26,7 @@
 
 % Title page
 
-\begin{titlepage} \backgroundsetup{contents={}} \begin{onecolumn}
+\begin{titlepage}\begin{onecolumn}
 \begin{center}
 	%\vspace{0.5cm}
 	{\Huge \textbf TITLE}
@@ -65,10 +64,10 @@
 	This work contains material that is copyright Wizards of the Coast and/or other authors. Such material is used with permission under the Community Content Agreement for Dungeon Masters Guild.\\
 	All other original material in this work is copyright 2016 by AUTHOR and published under the Community Content Agreement for Dungeon Masters Guild.}
 \end{minipage}
-\end{onecolumn} \end{titlepage}
+\end{onecolumn}\end{titlepage}
 \clearpage
 
-\dndtoc
+\setcounter{tocdepth}{2}\tableofcontents
 
 \subfile{part_1}
 \subfile{part_2}
