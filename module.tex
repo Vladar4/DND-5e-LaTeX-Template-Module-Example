@@ -1,18 +1,22 @@
 \documentclass[10pt,twoside,twocolumn,openany]{book}
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage[bg-print]{dnd} % Options: bg-a4, bg-letter, bg-full, bg-print, justified
+\usepackage[bg-print]{dnd} % Options: bg-full, bg-none, bg-print, justified
 \usepackage{subfiles}
 \usepackage{lipsum}
 
+\newcommand{\bookauthor}{AUTHOR}
+\newcommand{\booktitle}{TITLE}
+\newcommand{\booksubtitle}{Subtitle}
+
 \pdfinfo{
-	/Author (AUTHOR)
-	/Title  (TITLE)
+	/Author (\bookauthor)
+	/Title  (\booktitle)
 	/Keywords (D&D;Adventure)
 }
 
 \fancyfoot[LO,RE]{\vspace{-0.1cm}
-\footnotesize{Not for resale. Permission granted to print or photocopy this document for personal use only. TITLE}}
+\footnotesize{Not for resale. Permission granted to print or photocopy this document for personal use only. \booktitle}}
 
 % Reset footnote counter for each new page
 \usepackage{perpage} %the perpage package
@@ -20,7 +24,6 @@
 
 % Start document
 \begin{document}
-\fontfamily{ppl}\selectfont % Set text font
 
 % Your content goes here
 
@@ -28,14 +31,13 @@
 
 \begin{titlepage}\begin{onecolumn}
 \begin{center}
-	%\vspace{0.5cm}
-	{\Huge \textbf TITLE}
-	
+	{\Huge \booktitle}
+
 	\vspace{0.5cm}
 	\includegraphics[width=\textwidth]{img/hr.jpg}
 	
 	\vspace{0.5cm}
-	{\huge \textbf Subtitle}
+	{\huge \booksubtitle}
 	
 	\vspace{0.5cm}
 	% Replace this picture with cover art
@@ -45,14 +47,14 @@
 	%\includegraphics[width=\textwidth]{img/cover.jpg}
 	
 	\vspace{0.5cm}
-	\lipsum[1]
+	\lipsum[1] % Put the description here
 
 	\vspace{0.5cm}
-	{\Large A xxxx-hour adventure for two xxth--xxth level characters}
+	{\Large A xx-hour adventure for x xxth--xxth level characters}
 
 	\vfill
 	
-	{\Large by AUTHOR}
+	{\Large by \bookauthor}
 	
 	\vspace{0.35cm}
 	\includegraphics[width=0.25\textwidth]{img/dmsguild.jpg}
@@ -62,12 +64,12 @@
 {\footnotesize
 	DUNGEONS \& DRAGONS, D\&D, Wizards of the Coast, Forgotten Realms, Ravenloft, the dragon ampersand, and all other Wizards of the Coast product names, and their respective logos are trademarks of Wizards of the Coast in the USA and other countries.\\
 	This work contains material that is copyright Wizards of the Coast and/or other authors. Such material is used with permission under the Community Content Agreement for Dungeon Masters Guild.\\
-	All other original material in this work is copyright 2016 by AUTHOR and published under the Community Content Agreement for Dungeon Masters Guild.}
+	All other original material in this work is copyright 2016 by \bookauthor~and published under the Community Content Agreement for Dungeon Masters Guild.}
 \end{minipage}
 \end{onecolumn}\end{titlepage}
 \clearpage
 
-\setcounter{tocdepth}{2}\tableofcontents
+\setcounter{tocdepth}{2}\tableofcontents % Table of contents
 
 \subfile{part_1}
 \subfile{part_2}
