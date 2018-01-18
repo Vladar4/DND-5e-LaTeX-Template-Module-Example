@@ -1,7 +1,7 @@
 \documentclass[10pt,twoside,twocolumn,openany]{book}
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage[bg-print]{dnd} % Options: bg-full, bg-none, bg-print, justified
+\usepackage[bg=full]{dnd} % Options: bg=full, bg=print, bg=none
 \usepackage{subfiles}
 \usepackage{lipsum}
 
@@ -14,6 +14,8 @@
 	/Title  (\booktitle)
 	/Keywords (D&D;Adventure)
 }
+
+\fancyhead{} % Comment this if you want the paper texture back for bg=full mode (see lib/dndheader.sty for details)
 
 \fancyfoot[LO,RE]{\vspace{-0.1cm}
 \footnotesize{Not for resale. Permission granted to print or photocopy this document for personal use only. \booktitle}}
